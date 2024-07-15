@@ -1,0 +1,111 @@
+//Bootstrap Colors
+$primary:#2f328a;
+$secondary:#DF1683;
+
+$success: #C2D500;
+$info: #3CB4E5;
+$warning:#FFCD00;
+$danger: rgb(154, 21, 21);
+$light: #f2f2f2;
+$dark: #171717;
+
+
+$body-bg: white;
+$body-color: #000;
+$navbar-brand-font-size:.8rem;
+$navbar-toggler-font-size:.8rem;
+
+//Override BS Colors
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+  "info": $info,
+  "light": $light,
+  "dark": $dark,
+);
+
+//Custom colors
+$gobierno: (
+  "blue": #28018A,
+  "cyan": #3CB4E5,
+  "magenta": #DF1683,
+  "yellow": #FFCD00,
+  "green": #C2D500
+);
+$theme-colors: map-merge($theme-colors, $gobierno);
+
+$accesibles: (
+  "a-blue": #1A005B,
+  "a-cyan": #0B77A3,
+  "a-magenta": #D00E76,
+  "a-green": #5F800B
+);
+$theme-colors: map-merge($theme-colors, $accesibles);
+
+$secundarios: (
+  "s-silver": #7B868C,
+  "s-blue": #004987,
+);
+$theme-colors: map-merge($theme-colors, $secundarios);
+
+$mono: (
+  "m-black": #000,
+  "m-gray": #78797F,
+  "m-silver": #DDDDDF,
+  "m-light": #FFFFFF,
+);
+$theme-colors: map-merge($theme-colors, $mono);
+
+$pasteles: (
+  "p-purple": #EDE8FB,
+  "p-cyan": #D3F2FF,
+  "p-pink": #FFEBF6,
+  "p-green": #EEFDDB,
+  "p-silver": #f6f8fc,
+);
+$theme-colors: map-merge($theme-colors, $pasteles);
+
+
+
+
+
+@function textColor($color) {
+  @if (lightness($color) > 50) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+$deg-blue: 90deg, #2f328a 0%, #3157B6 48.44%, #3CB4E5 100%;
+$deg-blue-purple: 90deg, #2581C4 0%, #270089 48.44%, #DF1683 100%;
+
+$gradients: (
+    "deg-blue" : $deg-blue,
+    "deg-blue-purple" : $deg-blue-purple,
+);
+
+@each $name, $value in $gradients {
+    .bg-#{$name} {
+        background: linear-gradient($value);
+    }
+}
+
+.btn-cyan{
+  color: textColor($cyan)!important;
+}
+
+
+
+.colors{
+  display: flex;
+  .color{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+  }
+  
+}

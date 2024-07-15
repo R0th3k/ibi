@@ -1,0 +1,35 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Package lock files
+package-lock.json
+yarn.lock
+
+# Compiled stylesheets
+www/assets/css/*.css
+www/assets/css/*.min.css
+
+# Compiled JavaScript
+www/assets/js/min/*.js

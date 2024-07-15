@@ -1,0 +1,4 @@
+USER="u792428945.dev.hektor.mx"
+HOST="62.72.50.233"
+LOCAL_DIR="./www"
+REMOTE_DIR="./"
